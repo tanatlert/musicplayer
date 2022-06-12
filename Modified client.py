@@ -1,5 +1,4 @@
 import tkinter.messagebox
-
 import tkinter
 from tkinter.ttk import Progressbar
 import customtkinter
@@ -117,7 +116,7 @@ class App(customtkinter.CTk):
             song_len = a.get_length() * 3
             for i in range(0, math.ceil(song_len)):
                 time.sleep(.3)
-                self.progressbar.set(pygame.mixer.music.get_pos() / 200000)
+                self.progressbar.set(pygame.mixer.music.get_pos() / 230000)
 
         def threading():
             t1 = Thread(target=progress)
@@ -293,7 +292,7 @@ class App(customtkinter.CTk):
                                                          border_width=1,   # <- custom border_width
                                                          fg_color=None,   # <- no fg_color
                                                          command=play2)
-        self.playlist1.grid(row=1, column=0, pady=20, padx=20, sticky="swe")
+        self.playlist1.grid(row=1, column=0, pady=7, padx=20, sticky="swe")
    
         banner3 = Image.open(list_of_covers3[n])
         banner33=banner3.resize((175, 175))
